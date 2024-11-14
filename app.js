@@ -33,7 +33,7 @@ function getEmailProvider(mxRecord) {
   if (!mxRecord || mxRecord === 'failed') return '';
   
   const match = PROVIDER_MAPPINGS.find(mapping => mapping.pattern.test(mxRecord));
-  return match ? match.provider : '';
+  return match ? match.provider : 'other';
 }
 
 async function getMXRecord(domain) {
