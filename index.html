@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MX Lookup Tool</title>
+    <style>
+        body { 
+            font-family: system-ui; 
+            max-width: 800px; 
+            margin: 2rem auto; 
+            padding: 0 1rem; 
+        }
+        .warning { 
+            color: #d32f2f;
+            background: #ffebee;
+            padding: 1rem;
+            border-radius: 4px;
+        }
+        form {
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSV MX Lookup Tool</h1>
+    <h3>Submit a CSV of leads with a header called "email". This tool will lookup the mail service that these leads are using so that you can use provider matching for your emails. (e.g. send from a Google mailbox to a Google lead)</h3>
+    <div class="warning">
+        <strong>Important:</strong>
+        <ul>
+            <li>Maximum file size: 2MB</li>
+            <li>File must be CSV format</li>
+            <li>CSV must contain an email column</li>
+        </ul>
+    </div>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="csvFile" accept=".csv" required>
+        <button type="submit">Process CSV</button>
+    </form>
+</body>
+</html>
