@@ -24,7 +24,20 @@ const upload = multer({
 // Add this near the top of app.js with other constants
 const PROVIDER_MAPPINGS = [
   { pattern: /\.mail\.protection\.outlook\.com$/i, provider: 'office365' },
-  { pattern: /smtp\.google\.com$/i, provider: 'gsuite' },
+  { pattern: /\.google\.com$/i, provider: 'gsuite' },
+  { pattern: /\.ppe-hosted\.com$/i, provider: 'proofpoint' },
+  { pattern: /\.pphosted\.com$/i, provider: 'proofpoint' },
+  { pattern: /\.mimecast\.com$/i, provider: 'mimecast' },
+  { pattern: /\.hornetsecurity\.com$/i, provider: 'hornet' },
+  { pattern: /\.raptoremailsecurity\.com$/i, provider: 'raptor' },
+  { pattern: /\.zerospam\.ca$/i, provider: 'zerospam' },
+  { pattern: /\.barracudanetworks\.com$/i, provider: 'barracuda' },
+  { pattern: /\.trendmicro\.eu$/i, provider: 'trendmicro' },
+  { pattern: /\.mxrecord\.mx$/i, provider: 'ironport' },
+  { pattern: /\.mxrecord\.io$/i, provider: 'ironport' },
+  { pattern: /\.iphmx\.com$/i, provider: 'ironport' },
+  { pattern: /\.sophos\.com$/i, provider: 'sophos' },
+  { pattern: /\.messagelabs\.com$/i, provider: 'broadcom' },
   { pattern: /messagingengine\.com$/i, provider: 'fastmail' }
   // Add more mappings as needed
 ];
