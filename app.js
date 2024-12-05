@@ -24,6 +24,8 @@ const upload = multer({
 // Add this near the top of app.js with other constants
 const PROVIDER_MAPPINGS = [
   { pattern: /\.mail\.protection\.outlook\.com$/i, provider: 'office365' },
+  { pattern: /\.office365\.us$/i, provider: 'office365' },
+  { pattern: /\.olc\.protection\.outlook\.com$/i, provider: 'hotmail' },
   { pattern: /\.google\.com$/i, provider: 'gsuite' },
   { pattern: /\.ppe-hosted\.com$/i, provider: 'proofpoint' },
   { pattern: /\.pphosted\.com$/i, provider: 'proofpoint' },
@@ -32,12 +34,18 @@ const PROVIDER_MAPPINGS = [
   { pattern: /\.raptoremailsecurity\.com$/i, provider: 'raptor' },
   { pattern: /\.zerospam\.ca$/i, provider: 'zerospam' },
   { pattern: /\.barracudanetworks\.com$/i, provider: 'barracuda' },
+  { pattern: /\.fireeyecloud\.com$/i, provider: 'fireeye' },
   { pattern: /\.trendmicro\.eu$/i, provider: 'trendmicro' },
+  { pattern: /\.trendmicro\.com$/i, provider: 'trendmicro' },
   { pattern: /\.mxrecord\.mx$/i, provider: 'ironport' },
   { pattern: /\.mxrecord\.io$/i, provider: 'ironport' },
   { pattern: /\.iphmx\.com$/i, provider: 'ironport' },
   { pattern: /\.sophos\.com$/i, provider: 'sophos' },
+  { pattern: /\.emailservice\.io$/i, provider: 'mailprotector' },
   { pattern: /\.messagelabs\.com$/i, provider: 'broadcom' },
+  { pattern: /\.yahoodns\.net$/i, provider: 'aol' },
+  { pattern: /\.secureserver\.net$/i, provider: 'godaddy' },
+  { pattern: /\.arsmtp\.com$/i, provider: 'appriver' },
   { pattern: /messagingengine\.com$/i, provider: 'fastmail' }
   // Add more mappings as needed
 ];
